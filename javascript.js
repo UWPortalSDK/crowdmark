@@ -5,7 +5,23 @@ angular.module('portalApp')
 	$scope.items = [
 		{
 			title:'Math 135',
-			details: ['Assignment 1', 'Assignment 2' ]
+			details: [
+                {
+                    name: "Assignment 1",
+                    question: [
+                        {name: "Question 1",
+                         value: "slope of line"
+                        },
+                        {name: "Question 2",
+                         value: "quadratic"
+                        }
+                        ]
+                },
+                {
+                    name: "Assignment 2",
+                    question: "sslknass" 
+                }
+            ]
 		},
 		{
 			title:'Math 137',
@@ -25,5 +41,13 @@ angular.module('portalApp')
 		// Make the item that user clicked available to the template
 		$scope.detailsItem = item;		
 		$scope.portalHelpers.showView('crowdmarkDetails.html', 2);
-	}
+	};
+    
+    $scope.showDetails2 = function(item){
+		// Make the item that user clicked available to the template
+		$scope.details2Item = item;		
+		$scope.portalHelpers.showView('crowdmarkDetails2.html', 3);
+        console.log($scope.details2Item);
+	};
+   
 }]);
