@@ -12,6 +12,13 @@ angular.module('portalApp')
                 }, {
                     name: "Question 2",
                     value: "https://i.gyazo.com/07a0e4a9e276ad25ccaca5e68f7fc64b.png"
+                },
+                          {
+                    name: "Question 3",
+                    value: "https://i.gyazo.com/39f39b7b1289b3023081e4492167bfa9.png"
+                }, {
+                    name: "Question 4",
+                    value: "https://i.gyazo.com/7579f6f8e406bc9de404a6c252b0a65d.png"
                 }]
             }, {
                 name: "Assignment 2",
