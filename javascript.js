@@ -5,7 +5,7 @@ angular.module('portalApp')
 	$scope.items = [
 		{
 			title:'Math 135',
-			details: 'Assignment 1'
+			details: ['Assignment 1', 'Assignment 2' ]
 		},
 		{
 			title:'Math 137',
