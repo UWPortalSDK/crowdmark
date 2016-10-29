@@ -36,8 +36,8 @@
     
     <wr ng-repeat="item in details2Item.question"  >
 		<wc clickable><h4 >{{item.name}}</h4>
-        <h4 >{{item.value}}</h4></wc>
-        
+            <h4 ><img src={{item.value}}></img></h4></wc>
 	</wr>
+    <button onclick="myfn()"> Submit for Evaluation</button>
 	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
 </script>
