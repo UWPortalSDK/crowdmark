@@ -3,9 +3,6 @@
 	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
 		<widget-cell fill>
 			<span class="itemName">{{item.title}}</span>
-			<span ng-repeat= "tag in item.tags" class="label label-success">
-				{{tag}}
-			</span>
 		</widget-cell>
 		<widget-cell>
 			<widget-icon name="angle-right"></widget-icon>
@@ -19,9 +16,28 @@
 	<wr>
 		<wc><h2>{{detailsItem.title}}</h2></wc>
 	</wr>
-    <wr ng-repeat="item in detailsItem.details" >
-		<wc ng-click><h4 >{{item}}</h4></wc>
+    <wr clickable ng-click="showDetails2(item)" ng-repeat="item in detailsItem.details" >
+		<wc fill>
+            <span class="itemName">{{item.name}}</span>
+        </wc>
+        <wc>
+        <widget-icon name="angle-right"></widget-icon>
+        </wc>
 	</wr>
     
+	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
+</script>
+
+<script type="text/ng-template" id="crowdmarkDetails2.html"> 
+	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+	<wr>
+		<wc><h2>{{details2Item.title}}</h2></wc>
+	</wr>
+    
+    <wr ng-repeat="item in details2Item.question"  >
+		<wc clickable><h4 >{{item.name}}</h4>
+        <h4 >{{item.value}}</h4></wc>
+        
+	</wr>
 	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
 </script>
