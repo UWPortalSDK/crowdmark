@@ -1,24 +1,14 @@
 <!-- Primary template that will get shown when widget loads -->
 <script type="text/ng-template" id="crowdmarkMain.html"> 
-    
 	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
-		
-        <widget-cell fill>
-            <div class="item item-icon-right" ng-click="showDetails(item)">
-					{{item.title}}
-					<i class="icon icon-angle-right"></i>
-				</div>
+		<widget-cell fill>
+			<span class="itemName">{{item.title}}</span>
 		</widget-cell>
-
-        
 		<widget-cell>
 			<widget-icon name="angle-right"></widget-icon>
 		</widget-cell>
 	</widget-row>
-    
-    	
 </script>
-
 
 <!-- This template gets shown when user clicks one of the items in the list -->
 <script type="text/ng-template" id="crowdmarkDetails.html"> 
@@ -45,11 +35,8 @@
 	</wr>
     
     <wr ng-repeat="item in details2Item.question"  >
-		<wc ><h4 >{{item.name}}</h4>
-            <h4 ><img ng-src={{item.value}}></img></h4>
-        <button onclick="myfn()">Take Picture</button>
-        </wc> 
+		<wc clickable><h4 >{{item.name}}</h4>
+            <h4 ><img src={{item.value}}></img></h4></wc
 	</wr>
-    <button onclick="myfn2()">Submit for Evaluation</button>
 	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
 </script>
