@@ -10,10 +10,10 @@ angular.module('portalApp')
                     name: "Assignment 1",
                     question: [
                         {name: "Question 1",
-                         value: "slope of line"
+                         value: "https://i.gyazo.com/f46b2b6d95229a6c014f9840f18a51b5.png"
                         },
                         {name: "Question 2",
-                         value: "quadratic"
+                         value: "https://i.gyazo.com/07a0e4a9e276ad25ccaca5e68f7fc64b.png"
                         }
                         ]
                 },
